@@ -30,10 +30,7 @@ Parameters:
     Description: CodeDeploy application name
     Type: String
     Default: DemoApplication
-  BetaFleet:
-    Description: Fleet configured in CodeDeploy
-    Type: String
-    Default: DemoFleet
+
 Resources:
   CodePipelineArtifactStoreBucket:
     Type: 'AWS::S3::Bucket'
@@ -75,7 +72,7 @@ Resources:
     Properties:
       Authentication: GITHUB_HMAC
       AuthenticationConfiguration:
-        SecretToken: {{resolve:secretsmanager:MyGitHubSecret:SecretString:token}}
+        SecretToken: ghp_QVyRUGmXOehPxtuLZr0y8eW7tBnmbV2No1D
       Filters:
         - JsonPath: $.ref
           MatchEquals: 'refs/heads/{Branch}'
@@ -89,7 +86,7 @@ Resources:
   AppPipeline:
     Type: 'AWS::CodePipeline::Pipeline'
     Properties:
-      Name: !Sub ${RequesterName}:s3-bucket-creation
+      Name: !Sub ${RequesterName}-!Sub ${ApplicationName}
       RoleArn: !GetAtt 
         - CodePipelineServiceRole
         - Arn
@@ -108,7 +105,7 @@ Resources:
                 Owner: !Ref GitHubOwner
                 Repo: !Ref RepositoryName
                 Branch: !Ref BranchName
-                OAuthToken: {{resolve:secretsmanager:MyGitHubSecret:SecretString:token}}
+                OAuthToken: ghp_QVyRUGmXOehPxtuLZr0y8eW7tBnmbV2No1D
                 PollForSourceChanges: true
               RunOrder: 1
         - Name: Beta
