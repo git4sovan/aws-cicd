@@ -11,6 +11,8 @@
 # specific language governing permissions and limitations under the License.
 
 
+
+
 Parameters:
   RequesterName:
     Description: Requester name
@@ -19,7 +21,7 @@ Parameters:
   BranchName:
     Description: GitHub branch name
     Type: String
-    Default: master
+    Default: main
   RepositoryName:
     Description: GitHub repository name
     Type: String
