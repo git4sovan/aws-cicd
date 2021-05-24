@@ -123,8 +123,8 @@ Resources:
                 StakeName: !Ref ApplicationName
                 Capabilities: CAPABILITY_AUTO_EXPAND
                 RoleArn: arn:aws:iam::464260423044:role/cloudformation_s3_role
-                TemplatePath: SourceArtifact::template-export.yml
-                TemplateConfiguration: SourceArtifact::test-configuration.yml
+                TemplatePath: SourceArtifact::template-export.yaml
+                TemplateConfiguration: SourceArtifact::test-configuration.json
               RunOrder: 1
       ArtifactStore:
         Type: S3
