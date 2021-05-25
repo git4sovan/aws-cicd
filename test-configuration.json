@@ -2,7 +2,7 @@
   	"Parameters": {
   		"RequesterName": "sovansaha"
   		"BranchName": "main",
-  		"RepositoryName": "git4sovan/aws-cicd",
+  		"RepositoryName": "aws-cicd",
   		"GitHubOwner": "git4sovan",
   		"ApplicationName": "s3-bucket-creation-cloudform"
   	}
