@@ -1,17 +1,9 @@
-{
-  "Parameters" : {
-    "RequesterName" : "sovansaha"
-  },
   {
-    "BranchName" : "main"
-  },
-{
-    "RepositoryName" : "git4sovan/aws-cicd"
-  },
-  {
-    "GitHubOwner" : "agit4sovan"
-  },
-  {
-    "ApplicationName" : "s3-bucket-creation-cloudform"
+  	"Parameters": {
+  		"SNSEmail": "aws_is_best@email.com",
+  		"BranchName": "main",
+  		"RepositoryName": "git4sovan/aws-cicd",
+  		"GitHubOwner": "agit4sovan",
+  		"ApplicationName": "s3-bucket-creation-cloudform"
+  	}
   }
-}
