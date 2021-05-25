@@ -128,7 +128,8 @@ Resources:
                   - - !Sub ${RequesterName}
                     - !Sub ${ApplicationName}  
                 Capabilities:
-                  - CAPABILITY_IAM                
+                  - CAPABILITY_IAM
+                  -  CAPABILITY_AUTO_EXPAND
                 RoleArn: arn:aws:iam::464260423044:role/cloudformation_s3_role
                 TemplatePath: SourceArtifact::template-export.yaml
                 TemplateConfiguration: SourceArtifact::test-configuration.json
