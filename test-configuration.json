@@ -1,6 +1,6 @@
   {
   	"Parameters": {
-  		"SNSEmail": "aws_is_best@email.com",
+  		"RequesterName": "sovansaha"
   		"BranchName": "main",
   		"RepositoryName": "git4sovan/aws-cicd",
   		"GitHubOwner": "agit4sovan",
