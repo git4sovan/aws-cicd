@@ -25,13 +25,13 @@ Parameters:
   RepositoryName:
     Description: GitHub repository name
     Type: String
-    Default: test
+    Default: git4sovan/aws-cicd
   GitHubOwner:
     Type: String
   ApplicationName:
     Description: CodeDeploy application name
     Type: String
-    Default: DemoApplication
+    Default: s3-bucket-creation
 
 Resources:
   CodePipelineArtifactStoreBucket:
