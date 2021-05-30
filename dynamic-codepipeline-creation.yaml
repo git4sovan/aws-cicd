@@ -88,13 +88,9 @@ Resources:
   AppPipeline:
     Type: 'AWS::CodePipeline::Pipeline'
     Properties:
-      Name:  !Join
-        - '-'
-        - - !Sub ${RequesterName}
-          - !Sub ${ApplicationName}     
-      RoleArn: !GetAtt 
-        - CodePipelineServiceRole
-        - Arn
+      Name:  !Sub ${RequesterName}    
+      RoleArn:
+        !GetAtt CodePipelineServiceRole.Arn
       Stages:
         - Name: Source
           Actions:
@@ -123,10 +119,7 @@ Resources:
                 Provider: CloudFormation
               Configuration:
                 ActionMode: CREATE_UPDATE
-                StakeName:  !Join
-                  - '-'
-                  - - !Sub ${RequesterName}
-                    - !Sub ${ApplicationName}  
+                StakeName:   !Sub ${RequesterName}  
                 Capabilities.member.N:
                   - CAPABILITY_IAM
                   - CAPABILITY_NAMED_IAM
